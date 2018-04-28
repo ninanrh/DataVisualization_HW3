@@ -11,7 +11,7 @@ def loadData():
 
 data = loadData()
 
-with open ('chart.json', 'r') as f: # read the json file as dict
+with app.open_resource('static/chart.json', 'r') as f: # read the json file as dict
     chart = json.load(f)
 
 @app.route('/vis/<ZipCode>')
